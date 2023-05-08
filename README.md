@@ -36,4 +36,7 @@ The code should follow the PEP 8 style guide and use the pycodestyle linter (ver
 All files must be executable.
 
 The length of the files will be tested using the wc command.
-
+***
+**Author**
+***
+This repository was created by me as part of my coursework for the ALX Software Engineering program.
