@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-__import__(add_0.py) add
+from add_0 import add
 
 value_a = 1
 value_b = 2
