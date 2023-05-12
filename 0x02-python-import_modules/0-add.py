@@ -5,5 +5,4 @@ a = 1
 b = 2
 
 result = add(a, b)
-if __name__ == "__main__"
 print("{0} + {2} = {3}".format(a, b, result))
