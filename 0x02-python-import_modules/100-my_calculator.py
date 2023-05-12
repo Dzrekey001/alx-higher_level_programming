@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from calculator import add, sub, mul, div
+from calculator_1 import add, sub, mul, div
 import sys
 if __name__ == "__main__":
     arg_len = len(sys.argv) - 1
