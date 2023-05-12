@@ -5,5 +5,5 @@ import sys
 if __name__ == "__main__":
     names = sort(dir(hidden_4))
     for name in names:
-        if not name.startswith("__"):
+        if name[:2] != "__":
             print(name)
