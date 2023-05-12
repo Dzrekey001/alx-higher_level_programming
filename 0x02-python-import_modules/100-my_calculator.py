@@ -6,22 +6,22 @@ if __name__ == "__main__":
 
     if arg_len < 3 or arg_len > 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
+        exit(1)
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    math_sign = sys.argv[2]
+    if math_sign == "+":
+        print("{} + {} = {}".format(a, b, add(a, b)))
+        exit(0)
+    elif math_sign == "-":
+        print("{} - {} = {}".format(a, b, sub(a, b)))
+        exit(0)
+    elif math_sign == "*":
+        print("{} * {} = {}".format(a, b, mul(a, b)))
+        exit(0)
+    elif math_sign == "/":
+        print("{} / {} = {}".format(a, b, div(a, b)))
+        exit(0)
     else:
-        a = int(sys.argv[1])
-        b = int(sys.argv[3])
-        if sys.argv[2] == "+":
-            result = add(a, b)
-            print("{} + {} = {}".format(a, b, result))
-        elif sys.argv[2] == "-":
-            result = sub(a, b)
-            print("{} - {} = {}".format(a, b, result))
-        elif sys.argv[2] == "*":
-            result = mul(a, b)
-            print("{} * {} = {}".format(a, b, result))
-        elif sys.argv[2] == "/":
-            result = div(a, b)
-            print("{} / {} = {}".format(a, b, result))
-        else:
-            print("Unknown operator. Available operators: +, -, * and /")
-            sys.exit(1)
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
