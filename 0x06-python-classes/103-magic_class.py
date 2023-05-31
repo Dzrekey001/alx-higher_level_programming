@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+"""Define a class magicClass"""
 import math
-"""a magicClass"""
 
 
 class MagicClass:
@@ -17,9 +17,9 @@ class MagicClass:
         self.__radius = radius
 
     def area(self):
-        """return the area """
-        return self.__radius ** 2 * math.pi
+        """calculate the area of a circle"""
+        return (self.__radius ** 2) * math.pi
 
     def circumference(self):
-        """return the circumference"""
+        """calculate the circumference of a circle"""
         return 2 * math.pi * self.__radius
