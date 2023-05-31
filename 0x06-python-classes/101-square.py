@@ -58,7 +58,7 @@ class Square(object):
                 print("")
 
     def __str__(self):
-        """Define how prin() should print the square"""
+        """Define how __str__ should print the square"""
         if self.__size != 0:
             [print("") for n in range(0, self.__position[1])]
             for i in range(0, self.__size):
@@ -66,4 +66,4 @@ class Square(object):
                 [print("#", end="") for j in range(0, self.__size)]
                 if i != self.__size - 1:
                     print("")
-                return ("")
+        return ""
