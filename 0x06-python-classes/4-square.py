@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""a cass definition of a square"""
 
 
 class Square(object):
