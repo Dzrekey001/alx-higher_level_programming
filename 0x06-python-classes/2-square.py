@@ -10,7 +10,7 @@ class Square(object):
             size (int): size of the square
             Return: None
         """
-        if not isinstance(size, (int, float)):
+        if typeof(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
