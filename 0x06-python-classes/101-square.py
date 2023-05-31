@@ -57,13 +57,13 @@ class Square(object):
                     print("#", end="")
                 print("")
 
-        def __str__(self):
+    def __str__(self):
         """Define how prin() should print the square"""
         if self.__size != 0:
             [print("") for n in range(0, self.__position[1])]
-        for i in range(0, self.__size):
-            [print(" ", end="") for i in range(0, self.__position[0])]
-            [print("#", end="") for j in range(0, self.__size)]
-            if i != self.__size - 1:
-                print("")
-        return ("")
+            for i in range(0, self.__size):
+                [print(" ", end="") for i in range(0, self.__position[0])]
+                [print("#", end="") for j in range(0, self.__size)]
+                if i != self.__size - 1:
+                    print("")
+                return ("")
