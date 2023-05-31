@@ -1,4 +1,5 @@
-#!/usr/bin/python3import math
+#!/usr/bin/python3
+import math
 """a magicClass"""
 
 
