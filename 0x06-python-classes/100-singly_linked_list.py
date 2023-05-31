@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Node class for single linked list"""
 
 
@@ -18,7 +17,7 @@ class Node:
     @property
     def data(self):
         """Get/set the data of the Node."""
-        return (self.__data)
+        return self.__data
 
     @data.setter
     def data(self, value):
@@ -29,7 +28,7 @@ class Node:
     @property
     def next_node(self):
         """Get and set the next_node of the Node."""
-        return (self.__next_node)
+        return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
@@ -42,26 +41,24 @@ class SinglyLinkedList:
     """Representation of a singly-linked list."""
 
     def __init__(self):
-        """Initalize a new SinglyLinkedList."""
+        """Initialize a new SinglyLinkedList."""
         self.__head = None
 
     def sorted_insert(self, value):
-        """inserts a new Node into the correct sorted position in the list
-        (increasing order)
+        """Inserts a new Node into the correct sorted position in the list
+        (increasing order).
         Args:
-            value (Node): The new Node to insert.
+            value (int): The new Node value to insert.
         """
         new_node = Node(value)
         if self.__head is None:
-            new_node.next_node = None
-            self.__head = new
+            self.__head = new_node
         elif self.__head.data > value:
             new_node.next_node = self.__head
-            self.__head = new
+            self.__head = new_node
         else:
             tmp = self.__head
-            while (tmp.next_node is not None and
-                    tmp.next_node.data < value):
+            while tmp.next_node is not None and tmp.next_node.data < value:
                 tmp = tmp.next_node
             new_node.next_node = tmp.next_node
             tmp.next_node = new_node
@@ -74,4 +71,4 @@ class SinglyLinkedList:
         while tmp is not None:
             to_print.append(str(tmp.data))
             tmp = tmp.next_node
-        return ('\n'.join(to_print))
+        return '\n'.join(to_print)
