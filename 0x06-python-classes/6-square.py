@@ -57,10 +57,17 @@ class Square(object):
 
     @property
     def position(self):
-        self.__position = position
+        """getter of __position
+            Returns: the positions
+        """
+        return self.__position
 
     @position.setter
     def position(self, position):
+        """setter of __position
+            Args:
+            position (tuple): tuple containing the position
+        """
         if (len(position) != 2 or
             type(position) is not tuple or
                 not all(isinstance(num, int) for num in position) or
