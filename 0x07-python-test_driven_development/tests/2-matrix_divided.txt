@@ -1,4 +1,4 @@
-The ``add_integer`` doctest
+The ``matrix_divided`` doctest
 
 Test Cases:
 	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
