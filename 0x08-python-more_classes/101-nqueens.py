@@ -20,7 +20,6 @@ if __name__ == "__main__":
         print("N must be at least 4")
         exit(1)
 
-    # Initialize the answer list
     for i in range(board_size):
         queens.append([i, None])
 
@@ -53,10 +52,10 @@ if __name__ == "__main__":
             clear_queens(row)
             if reject(row, col):
                 queens[row][1] = col
-                if row == board_size - 1:  # Accepts the solution
+                if row == board_size - 1:
                     print(queens)
                 else:
-                    nqueens(row + 1)  # Moves on to the next row
+                    nqueens(row + 1)
 
-    # Start the recursive process at row 0
+    """Start the recursive process at row 0"""
     nqueens(0)
