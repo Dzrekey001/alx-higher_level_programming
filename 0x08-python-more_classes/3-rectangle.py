@@ -6,7 +6,9 @@
 
 class Rectangle:
     """Define the class for the rectangle"""
-    def __init__(self, width, height):
+
+    def __init__(self, width=0, height=0):
+        """Initializes intanstance variables"""
         self.width = width
         self.height = height
 
@@ -17,11 +19,25 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        if type(self.value) is not int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
 
-        if self.value < 0:
+        if value < 0:
             raise TypeError("height must be >= 0")
+        self_width = value
+
+    @property
+    def height(self):
+        """getter/setter property for self.height"""
+        return (self._height)
+
+    @height.setter
+    def height(self, value):
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self._height = value
 
     def area(self):
         """A public instance that defines area of rectangle"""

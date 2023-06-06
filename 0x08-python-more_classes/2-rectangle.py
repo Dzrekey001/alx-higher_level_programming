@@ -25,6 +25,19 @@ class Rectangle:
             raise TypeError("height must be >= 0")
         self_width = value
 
+    @property
+    def height(self):
+        """getter/setter property for self.height"""
+        return (self._height)
+
+    @height.setter
+    def height(self, value):
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self._height = value
+
     def area(self):
         """A public instance that defines area of rectangle"""
         return (self._width * self.height)
