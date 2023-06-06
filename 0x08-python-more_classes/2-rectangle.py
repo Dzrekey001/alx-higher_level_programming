@@ -7,6 +7,7 @@
 class Rectangle:
     """Define the class for the rectangle"""
     def __init__(self, width=0, height=0):
+        """Initializes intanstance variables"""
         self.width = width
         self.height = height
 
@@ -17,12 +18,13 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        if type(self.value) is not int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
 
-        if self.value < 0:
+        if value < 0:
             raise TypeError("height must be >= 0")
-    
+        self_width = value
+
     def area(self):
         """A public instance that defines area of rectangle"""
         return (self._width * self.height)
