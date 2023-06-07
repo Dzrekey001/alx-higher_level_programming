@@ -38,4 +38,8 @@ Test cases:
 	<BLANKLINE>
 	>>> text_indentation("\n Hello babe, how are you doing ")
 	<BLANKLINE>
-	 Hello babe, how are you doing 
+	 Hello babe, how are you doing
+	>>> text_indentation("", 1)
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() takes 1 positional argument but 2 were given 
