@@ -44,15 +44,15 @@ class TestMaxInt(unittest.TestCase):
     def test_OneNagative(self):
         """Function to test for only one negative number"""
         self.assertEqual(max_integer([-1, 10, 4, 5]), 10)
-    
+
     def test_MaxAtBeginning(self):
         """Function to test for the max at the beginning"""
         self.assertEqual(max_integer([100, 1, 2, 4]), 100)
 
-
     def test_MaxAtEnd(self):
         """function to test for the max at the end of a list"""
         self.assertEqual(max_integer([1, 2, 3, 4, 100]), 100)
+
 
 if __name__ == "__main__":
     unittest.main()
