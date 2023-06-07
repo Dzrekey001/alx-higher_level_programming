@@ -29,6 +29,30 @@ class TestMaxInt(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer(None)
 
+    def test_negativeInt(self):
+        """Function to test for Negative"""
+        self.assertEqual(max_integer([-1, -3, -4, -5]), -1)
+
+    def test_OneElement(self):
+        """Function to test for one element"""
+        self.assertEqual(max_integer([1]), 1)
+
+    def test_ElementMiddle(self):
+        """Function to test for element in middle"""
+        self.assertEqual(max_integer([1, 2, 60, 4, 5]), 60)
+
+    def test_OneNagative(self):
+        """Function to test for only one negative number"""
+        self.assertEqual(max_integer([-1, 10, 4, 5]), 10)
+    
+    def test_MaxAtBeginning(self):
+        """Function to test for the max at the beginning"""
+        self.assertEqual(max_integer([100, 1, 2, 4]), 100)
+
+
+    def test_MaxAtEnd(self):
+        """function to test for the max at the end of a list"""
+        self.assertEqual(max_integer([1, 2, 3, 4, 100]), 100)
 
 if __name__ == "__main__":
     unittest.main()
