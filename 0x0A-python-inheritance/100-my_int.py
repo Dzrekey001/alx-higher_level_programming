@@ -14,6 +14,6 @@ class MyInt(int):
         """Invert the equal sign"""
         return (self.integer != other)
 
-    def __nq__(self, other):
+    def __ne__(self, other):
         """Invert the not equal sign"""
         return (self.integer == other)
