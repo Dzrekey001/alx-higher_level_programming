@@ -6,14 +6,14 @@
 
 class MyInt(int):
     """Inherits form int"""
-    def __init__(self, integer):
+    def __init__(self, value):
         """Initialize instance attributes"""
-        self.integer = integer
+        self.value = value
 
     def __eq__(self, other):
         """Invert the equal sign"""
-        return (self.integer != other)
+        return (self.value != other)
 
     def __ne__(self, other):
         """Invert the not equal sign"""
-        return (self.integer == other)
+        return (self.value == other)
