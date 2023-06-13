@@ -1,6 +1,18 @@
-The ```1-my_list.py``` test
+The ``1-my_list.py`` test
 
 Test Cases:
+	>>> c = __import__("1-my_list").MyList.__doc__
+	>>> len(c) > 1
+	True
+	>>> m = __import__("1-my_list").__doc__
+	>>> len(m) > 1
+	True
+	>>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
+	>>> len(mod) > 1
+	True
+	>>> l = MyList()
+	>>> l.print_sorted()
+	[]
 	>>> MyList = __import__('1-my_list').MyList
 	>>> my_list = MyList()
 	>>> my_list.append(1)
@@ -35,7 +47,7 @@ Test Cases:
 	>>> l.print_sorted()
 	[-10, -8, -7, -2, -1]
 	>>> print(l)
-        [-10, -1, -7, -2, -8]
+	[-10, -1, -7, -2, -8]
 	>>> l.print_sorted(1)
 	Traceback (most recent call last):
 	...
