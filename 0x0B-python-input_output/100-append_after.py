@@ -17,6 +17,6 @@ def append_after(filename="", search_string="", new_string=""):
                 break
             new_list.append(line)
             if search_string in line:
-                new_list.append(line)
-    with open(filename, 'w', encoding='utf-8') as f:
-        f.writelines(new_list)
+                new_list.append(new_string)
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.writelines(new_list)
