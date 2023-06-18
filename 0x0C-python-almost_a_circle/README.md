@@ -1,10 +1,11 @@
-#Python - Almost a Circle
+**Python - Almost a Circle**
 
 This project is part of the Higher Level Curriculum at ALX School. It is designed to reinforce and test your understanding of various Python concepts, including object-oriented programming, unit testing, file I/O, and JSON serialization/deserialization.
 
 The project is divided into multiple tasks, each building upon the previous one. The goal is to create a set of classes and methods that simulate a rectangle and a square, while also implementing important features such as attribute validation, area calculation, display, and updating.
 ***
-#Learning Objectives#
+**Learning Objectives**
+
 By completing this project, you will gain knowledge and practical experience in the following areas:
 
 1. Implementing unit tests in a large project
@@ -14,7 +15,8 @@ By completing this project, you will gain knowledge and practical experience in 
 5. Handling named arguments in functions
 
 ***
-#Requirements
+**Requirements**
+
 1. Python scripts should be written and executed using Python 3.8.5 on Ubuntu 20.04 LTS.
 2. The pycodestyle tool (version 2.8.*) should be used to validate the code style.
 3. All files must be executable and end with a new line.
@@ -23,7 +25,9 @@ By completing this project, you will gain knowledge and practical experience in 
 6. Documentation should be provided for all modules, classes, and functions.
 7. All files, classes, and methods must be unit tested and comply with PEP 8 style guidelines.
 ***
-#Project Structure
+
+**Project Structure**
+
 The project is organized as follow
 
 ```shell
