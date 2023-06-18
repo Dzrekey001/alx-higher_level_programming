@@ -1,4 +1,4 @@
-#Python - Almost a Circle#
+#Python - Almost a Circle
 
 This project is part of the Higher Level Curriculum at ALX School. It is designed to reinforce and test your understanding of various Python concepts, including object-oriented programming, unit testing, file I/O, and JSON serialization/deserialization.
 
@@ -14,7 +14,7 @@ By completing this project, you will gain knowledge and practical experience in 
 5. Handling named arguments in functions
 
 ***
-#Requirements#
+#Requirements
 1. Python scripts should be written and executed using Python 3.8.5 on Ubuntu 20.04 LTS.
 2. The pycodestyle tool (version 2.8.*) should be used to validate the code style.
 3. All files must be executable and end with a new line.
@@ -23,7 +23,7 @@ By completing this project, you will gain knowledge and practical experience in 
 6. Documentation should be provided for all modules, classes, and functions.
 7. All files, classes, and methods must be unit tested and comply with PEP 8 style guidelines.
 ***
-#Project Structure#
+#Project Structure
 The project is organized as follow
 
 ```shell
@@ -48,7 +48,7 @@ The tests directory contains unit tests for the project. It follows the same str
 **How to Use**
 To use the project, follow these steps:
 
-Clone the repository: git clone https://github.com/your_username/alx-higher_level_programming.git
+Clone the repository: git clone https://github.com/Dzrekey001/alx-higher_level_programming.git
 
 Navigate to the project directory: cd 0x0C-python-almost_a_circle
 
