@@ -46,5 +46,6 @@ class Base:
             if list_objs is None:
                 jsfile.write("[]")
             else:
-                content = [tmp.to_dictionary() for tmp in list_objs]
-                jsfile.write(cls.to_json_string(content))
+                content = cls.to_json_string(
+                        [objs.to_dictionary() for objs in list_objs])
+                jsfile.write(content)
