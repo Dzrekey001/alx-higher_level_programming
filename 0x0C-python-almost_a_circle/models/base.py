@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+"""This class is the base of other classes"""
 
 import json
 
 
-class Base(object):
+class Base:
     """ Base class for all other classes
         Attributes:
             __nb_objects (int): The number of instantitated Bases
@@ -30,9 +31,10 @@ class Base(object):
         Returns:
             json represation
         """
-        if list_dictionaries is not None:
+        if (list_dictionaries is not None or len(list_dictionaries) == 0):
             return "[]"
-        return json.dumps(list_dictionaries)
+        else:
+            return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -45,4 +47,4 @@ class Base(object):
                 jsfile.write("[]")
             else:
                 content = [tmp.to_dictionary() for tmp in list_objs]
-                jsfile.write(Base.to_json_string(content))
+                jsfile.write(cls.to_json_string(content))
