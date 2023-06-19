@@ -40,12 +40,11 @@ class Base:
     def save_to_file(cls, list_objs):
         """Save all intance value to json"""
 
-        file_name = cls.__name__ + ".json"
-
-        with open(file_name, "w") as jsfile:
+        filename = cls.__name__ + ".json"
+        with open(filename, "w") as open_file:
             if list_objs is None:
-                jsfile.write("[]")
+                open_file.write("[]")
             else:
-                content = cls.to_json_string(
+                string_rep = cls.to_json_string(
                         [objs.to_dictionary() for objs in list_objs])
-                jsfile.write(content)
+                open_file.write(string_rep)
