@@ -139,7 +139,7 @@ class Rectangle(Base):
                     self.x = value
                 elif key == "y":
                     self.y = value
-    
+
     def to_dictionary(self):
         """returns the dictionary representation of the rectangle value"""
         return {"id": self.id,
