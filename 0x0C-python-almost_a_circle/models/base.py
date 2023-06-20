@@ -55,3 +55,13 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Return a class instance from a dictionary of attribute"""
+        if cls.__name__ == "Rectangle":
+            tmp = cls(1, 1)
+        else:
+            tmp = cls(1)
+        tmp.update(**dictionary)
+        return tmp
