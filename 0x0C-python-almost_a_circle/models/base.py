@@ -38,13 +38,11 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Save all intance value to json"""
-
-        filename = cls.__name__ + ".json"
-        with open(filename, "wr") as open_file:
+        """Save JSON representation to file"""
+        file_name = cls.__name__ + ".json"
+        with open(file_name, "w") as jsonfile:
             if list_objs is None:
-                open_file.write("[]")
+                jsonfile.write("[]")
             else:
-                string_rep = cls.to_json_string(
-                        [objs.to_dictionary() for objs in list_objs])
-                open_file.write(string_rep)
+                list_dicts = [o.to_dictionary() for o in list_objs]
+                jsonfile.write(Base.to_json_string(list_dicts))
