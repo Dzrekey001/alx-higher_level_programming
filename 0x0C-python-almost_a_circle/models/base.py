@@ -2,6 +2,7 @@
 """This class is the base of other classes"""
 
 import json
+import os
 
 
 class Base:
