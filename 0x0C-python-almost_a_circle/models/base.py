@@ -3,6 +3,8 @@
 
 import json
 import os
+import csv
+import turtle
 
 
 class Base:
@@ -65,3 +67,57 @@ class Base:
             tmp = cls(1)
         tmp.update(**dictionary)
         return tmp
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances
+        If the file doesn't exit return an empty list
+        otherwise a list of instances, must use from_json_string()
+        and create(). Has the deserialization behaviour
+        """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as open_file:
+                json_data = open_file.read()
+                dict_list = cls.from_json_string(json_data)
+                dummy_instance = [cls.create(**d) for d in dict_list]
+                return dummy_instance
+        except IOError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """write the CSV serialization of list_objs to a file,
+        Has the serialization behaviour
+        """
+        class_name = ["id", "width", "height", "x", "y"]
+        if cls.__name__ == "Square":
+            class_name = ["id", "size", "x", "y"]
+
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline="") as open_file:
+            writer = csv.DictWriter(open_file, fieldnames=class_name)
+            if list_objs is None or list_objs == []:
+                writer.write("[]")
+            else:
+                for objs in list_objs:
+                    writer.writerow(objs.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Mimicks the behavior of the JSON deserialization
+        Return a list of classes from a CSV file
+        """
+        class_name = ["id", "width", "height", "x", "y"]
+        if cls.__name__ == "Square":
+            class_name = ["id", "size", "x", "y"]
+
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r", newline="") as open_file:
+                l_d = csv.DictReader(open_file, fieldnames=class_name)
+                dct = [dict([k, int(v)] for k, v in d.items()) for d in l_d]
+                return [cls.create(**d) for d in dct]
+        except IOError:
+            return "[]"
+
