@@ -120,4 +120,3 @@ class Base:
                 return [cls.create(**d) for d in dct]
         except IOError:
             return "[]"
-
