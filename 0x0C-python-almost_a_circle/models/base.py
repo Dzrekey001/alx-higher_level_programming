@@ -41,7 +41,7 @@ class Base:
         """Save all intance value to json"""
 
         filename = cls.__name__ + ".json"
-        with open(filename, "w") as open_file:
+        with open(filename, "wr") as open_file:
             if list_objs is None:
                 open_file.write("[]")
             else:
