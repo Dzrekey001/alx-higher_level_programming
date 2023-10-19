@@ -1,4 +1,4 @@
--- a script that creates the database hbtn_0d_usa and the table states (in the database hbtn_0d_usa) on your MySQL server.
+-- a script that creates the database hbtn_0d_usa and the table states (in the database hbtn_0d_usa) on the MySQL server.
 
 -- states description:
 -- id INT unique, auto generated, can’t be null and is a primary key
