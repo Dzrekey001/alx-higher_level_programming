@@ -6,7 +6,7 @@
  * n instance method called charPrint(c) that prints the rectangle using the character c
  * If c is undefined, use the character X
  */
-const Rectangle = require('./5-rectangle.js');
+const Rectangle = require('./5-square');
 
 class Square extends Rectangle {
   constructor (size) {
