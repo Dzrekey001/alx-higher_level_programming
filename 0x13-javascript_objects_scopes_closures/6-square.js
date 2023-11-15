@@ -14,11 +14,12 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c === undefined) c = 'X';
+    let myChar = c;
+    if (myChar === undefined) myChar = 'X';
     let count = 1;
     while (count <= this.height) {
       for (let x = 1; x <= this.width; x++) {
-        process.stdout.write(c);
+        process.stdout.write(myChar);
       }
       count++;
       console.log();
