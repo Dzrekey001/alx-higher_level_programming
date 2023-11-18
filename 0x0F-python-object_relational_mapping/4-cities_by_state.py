@@ -1,0 +1,17 @@
+#!/usr/bin python3
+
+from sys import argv
+import MySQLdb as db
+
+if __name__ == "__main__":
+    connection = db.connect(
+            host="localhost", port=3306, user=argv[1],
+            passwd=argv[2], db=argv[3])
+    cursor = connection.cursor()
+    query = "SELECT * FROM cities ORDER BY cities.id"
+
+    cursor.execute(query)
+    selected_cities = cursor.fetchall()
+
+    for row in selected_cities:
+        print(row)
