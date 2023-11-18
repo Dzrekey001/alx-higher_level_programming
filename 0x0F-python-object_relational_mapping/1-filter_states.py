@@ -16,7 +16,7 @@ if __name__ == "__main__":
     db_cursor = connection.cursor()
 
     db_cursor.execute(
-        "SELECT * from hbtn_0e_0_usa.states WHERE name LIKE 'N%' \
+        "SELECT * from states WHERE name LIKE 'N%' \
         ORDER BY states.id ASC")
     selected_row = db_cursor.fetchall()
 
