@@ -18,7 +18,7 @@ if __name__ == '__main__':
             host="localhost", port=3306, user=argv[1],
             passwd=argv[2], db=argv[3])
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM hbtn_0e_0_usa.states")
+    cursor.execute("SELECT * FROM states")
     selected_rows = cursor.fetchall()
 
     for row in selected_rows:
