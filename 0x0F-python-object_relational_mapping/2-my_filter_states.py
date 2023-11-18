@@ -9,7 +9,7 @@ import MySQLdb as db
 
 if __name__ == "__main__":
     search_name = argv[4]
-    query = "SELECT * FROM states WHERE name='{}' \
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}' \
             ORDER BY states.id".format(search_name)
     connection = db.connect(
                 host="localhost", port=3306, user=argv[1],
