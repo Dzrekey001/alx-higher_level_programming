@@ -8,12 +8,15 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sys import argv
-from urllib.parse import quote
 
 if __name__ == "__main__":
+    """
+        Access to the database and get a state
+        from the database.
+    """
     engine = create_engine(
             "mysql://{}:{}@localhost/{}".format(
-                argv[1], quote(argv[2]), argv[3]))
+                argv[1], argv[2], argv[3]))
     Session = sessionmaker(bind=engine)
     app_session = Session()
 
