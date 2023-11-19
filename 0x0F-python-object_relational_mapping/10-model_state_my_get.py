@@ -15,15 +15,15 @@ if __name__ == "__main__":
         from the database.
     """
     engine = create_engine(
-            "mysql://{}:{}@localhost:3306/{}".format(
+            "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
                 argv[1], argv[2], argv[3]))
     Session = sessionmaker(bind=engine)
 
     app_session = Session()
 
-    states = app_session.query(State).filter(State.name == argv[4]).first()
+    state = app_session.query(State).filter(State.name == argv[4]).first()
 
-    if states is not None:
+    if state is not None:
         print(state.id)
     else:
         print("Not found")
