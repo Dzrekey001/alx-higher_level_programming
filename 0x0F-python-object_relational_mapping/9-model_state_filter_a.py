@@ -22,8 +22,8 @@ if __name__ == "__main__":
     app_session = Session()
 
     states = app_session.query(State).filter(
-            State.name.contains('a')).order_by(State.id)
+            State.name.contains('a'))
 
-    if states in not None:
+    if states is not None:
         for state in states:
             print(f"{state.id}: {state.name}")
