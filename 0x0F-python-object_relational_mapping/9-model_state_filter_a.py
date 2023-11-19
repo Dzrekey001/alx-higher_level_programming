@@ -16,13 +16,13 @@ if __name__ == "__main__":
     """
 
     engine = create_engine(
-            "mysql://{}:{}@localhost/{}".format(
+            "mysql://{}:{}@localhost:3306/{}".format(
                 argv[1], argv[2], argv[3]))
     Session = sessionmaker(bind=engine)
     app_session = Session()
 
     states = app_session.query(State).filter(
-            State.name.contain('a')).order_by(State.id)
+            State.name.contains('a')).order_by(State.id)
 
     if states in not None:
         for state in states:
