@@ -15,10 +15,14 @@ if __name__ == "__main__":
         from the database.
     """
     engine = create_engine(
-            "mysql://{}:{}@localhost/{}".format(
+            "mysql+mysqldb://{}:{}@localhost/{}".format(
                 argv[1], argv[2], argv[3]))
     Session = sessionmaker(bind=engine)
     app_session = Session()
 
-    first_instance = app_session.query(State).order_by(State.id).first()
-    print(f"{first_instance.id}: {first_instance.name}")
+    state = app_session.query(State).order_by(State.id).first()
+    
+    if state is not None:
+        print(f"{state.id}: {state.name}")
+    else:
+        print("Nothing")
