@@ -10,6 +10,10 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
 if __name__ == "__main__":
+    """
+        Access to the database and get a state
+        from the database.
+    """
     engine = create_engine(
             "mysql://{}:{}@localhost:3306/{}".format(
                 argv[1], argv[2], argv[3]))
@@ -17,10 +21,9 @@ if __name__ == "__main__":
 
     app_session = Session()
 
-    states = app_session.query(State).filter(State.name == argv[4])
+    states = app_session.query(State).filter(State.name == argv[4]).first()
 
     if states is not None:
-        for state in states:
-            print(state.id)
+        print(state.id)
     else:
         print("Not found")
