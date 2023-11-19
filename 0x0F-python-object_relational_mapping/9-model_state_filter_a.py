@@ -21,7 +21,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     app_session = Session()
 
-    states = app_session.query(State).filter(State.name.contain('a')).order_by(State.id)
+    states = app_session.query(State).filter(
+            State.name.contain('a')).order_by(State.id)
 
     if states in not None:
         for state in states:
