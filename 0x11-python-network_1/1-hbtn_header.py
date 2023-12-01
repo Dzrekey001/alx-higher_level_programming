@@ -7,7 +7,9 @@
 from sys import argv
 import urllib.request
 
-request = urllib.request.Request(argv[1])
-with urllib.request.urlopen(request) as response:
-    body = response.headers.get("X-Request-Id")
-    print(body)
+
+if __name__ == "__main__":
+    request = urllib.request.Request(argv[1])
+    with urllib.request.urlopen(request) as response:
+        body = response.headers.get("X-Request-Id")
+        print(body)
