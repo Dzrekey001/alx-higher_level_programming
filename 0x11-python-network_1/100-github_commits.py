@@ -17,7 +17,7 @@ if __name__ == "__main__":
             if count == 10:
                 break
             author = commit.get("commit").get("author")
-            print("{} {}".format(commit.get("sha"), author.get("name")))
+            print("{}: {}".format(commit.get("sha"), author.get("name")))
             count += 1
     except IndexError:
         pass
